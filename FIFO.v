@@ -1,10 +1,3 @@
-//////////////////////////////////////////////////////////////////////////////////
-// University: University of Information Technology
-// Student: Nguyen Dinh Nhat
-// Module Name: FIFO
-// Project Name: CRYSTALS_Kyber512
-// Description: FIFO (First-In First-Out) uses Simple Dual Port RAM
-//////////////////////////////////////////////////////////////////////////////////
 module FIFO#(
     parameter DWIDTH = 32,
     parameter ADEPTH =  5)(
