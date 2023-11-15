@@ -27,13 +27,13 @@ module FIFO#(
     SDPRAM(
     /*================ Port A ================*/
         .CLKA  (CLK),
-        .ENA   (~FULL),
+        .ENA   (WR_EN & (~FULL)),
         .WEA   (WR_EN),
         .ADDRA (wr_ptr[(ADEPTH - 1):0]),
         .DINA  (DIN),
     /*================ Port B ================*/
         .CLKB  (CLK),
-        .ENB   (~EMPTY),
+        .ENB   (RD_EN & (~EMPTY)),
         .ADDRB (rd_ptr[(ADEPTH - 1):0]),
         .DOUTB (DOUT)
     );
